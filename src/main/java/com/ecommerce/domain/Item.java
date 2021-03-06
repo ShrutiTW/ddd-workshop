@@ -2,12 +2,10 @@ package main.java.com.ecommerce.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Item {
     private Product product;
-    private int quantity ;
+    private int quantity;
 
     public Item(Product product, int quantity) {
         this.product = product;
@@ -20,7 +18,7 @@ public class Item {
 
     @Override
     public String toString() {
-        return "Product" + product +" with quantity " +quantity + " is added to the cart" ;
+        return "Product" + product + " with quantity " + quantity + " is added to the cart";
     }
 
     public boolean hasPrice() {

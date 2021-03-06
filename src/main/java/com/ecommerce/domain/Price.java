@@ -12,4 +12,8 @@ public class Price {
     public Double getValue() {
         return value;
     }
+
+    public static double priceReducedByTenPercent(Price competeitorPrice) {
+        return competeitorPrice.getValue() - (competeitorPrice.getValue() * 0.1);
+    }
 }
