@@ -1,6 +1,6 @@
-package main.java.com.ecommerce.domain.domain_service;
+package main.java.com.ecommerce.domain;
 
-import main.java.com.ecommerce.domain.Product;
+import main.java.com.ecommerce.domain.domain_service.CompetitorPricer;
 
 public class ProductFactory {
 

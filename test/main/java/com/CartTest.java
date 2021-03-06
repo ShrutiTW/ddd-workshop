@@ -1,7 +1,7 @@
 package main.java.com;
 
 import main.java.com.ecommerce.domain.*;
-import main.java.com.ecommerce.domain.domain_service.ProductFactory;
+import main.java.com.ecommerce.domain.ProductFactory;
 import org.junit.Test;
 
 import java.util.UUID;

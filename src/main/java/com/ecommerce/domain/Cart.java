@@ -9,9 +9,10 @@ public class Cart {
 
     private List<Item> itemList = new ArrayList<>();
     private List<Product> deletedProducts = new ArrayList<>();
-    private boolean checkedOut = false;
+    private boolean isCheckedOut = false;
 
-    public Cart(UUID uniqueCart) {
+    public Cart(UUID uniqueCart ) {
+        this.isCheckedOut =false;
     }
 
     public void addItem(Item itemToAdd) {
@@ -42,7 +43,7 @@ public class Cart {
     }
 
     public Order checkOut() {
-        checkedOut = true;
+        isCheckedOut = true;
         List<List<Product>> products = itemList.stream().map(Item::getProducts).collect(Collectors.toList());
         return new Order(products.stream().flatMap(List::stream).collect(Collectors.toList()));
     }

@@ -3,7 +3,7 @@ package main;
 import main.java.com.ecommerce.domain.Cart;
 import main.java.com.ecommerce.domain.Item;
 import main.java.com.ecommerce.domain.Product;
-import main.java.com.ecommerce.domain.domain_service.ProductFactory;
+import main.java.com.ecommerce.domain.ProductFactory;
 
 import java.util.List;
 import java.util.UUID;
