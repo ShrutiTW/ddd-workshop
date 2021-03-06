@@ -11,7 +11,7 @@ import static org.junit.Assert.assertFalse;
 public class CartTest {
     @Test
     public void addItem_ShouldAddIpadProToCart() {
-        Product ipadPro = new Product("Ipad pro", new Price("INR", 20.0));
+        Product ipadPro = new Product("Ipad pro", new Price("INR", 20.0), 100.0);
         Item ipadProItem = new Item(ipadPro, 1);
         Cart cart = new Cart(UUID.randomUUID());
         cart.addItem(ipadProItem);
@@ -19,7 +19,7 @@ public class CartTest {
 
     @Test
     public void addItem_ShouldAddHeroInkPenToCart() {
-        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 20.0));
+        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 20.0), 100.0);
         Item heroInkPenItem = new Item(heroInkPen, 0);
         Cart cart = new Cart(UUID.randomUUID());
         cart.addItem(heroInkPenItem);
@@ -27,7 +27,7 @@ public class CartTest {
 
     @Test
     public void addItem_ShouldAddGMCricketBatWith2Quantity() {
-        Product gmCricketBat = new Product("GM Cricket bat", new Price("INR", 50.0));
+        Product gmCricketBat = new Product("GM Cricket bat", new Price("INR", 50.0), 100.0);
         Item gmCricketBatItem = new Item(gmCricketBat, 2);
         Cart cart = new Cart(UUID.randomUUID());
         cart.addItem(gmCricketBatItem);
@@ -35,7 +35,7 @@ public class CartTest {
 
     @Test
     public void removeItem_ShouldRemoveIpadProFromCart() {
-        Product ipadPro = new Product("Ipad pro", new Price("INR", 60.0));
+        Product ipadPro = new Product("Ipad pro", new Price("INR", 60.0), 100.0);
         Item ipadProItem = new Item(ipadPro, 1);
         Cart cart = new Cart(UUID.randomUUID());
         cart.addItem(ipadProItem);
@@ -44,12 +44,12 @@ public class CartTest {
 
     @Test
     public void fetchItemsFromTheCart() {
-        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0));
+        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0), 100.0);
         Item heroInkPenItem = new Item(heroInkPen, 0);
         Cart cart = new Cart(UUID.randomUUID());
         cart.addItem(heroInkPenItem);
 
-        Product ipadPro = new Product("Ipad pro", new Price("INR", 30.0));
+        Product ipadPro = new Product("Ipad pro", new Price("INR", 30.0), 100.0);
         Item ipadProItem = new Item(ipadPro, 1);
         cart.addItem(ipadProItem);
         cart.removeItem(ipadProItem);
@@ -61,7 +61,7 @@ public class CartTest {
     public void twoCartsShouldNotBeEqual() {
 
         Cart cart = new Cart(UUID.randomUUID());
-        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0));
+        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0), 100.0);
         Item heroInkPenItem = new Item(heroInkPen, 0);
         cart.addItem(heroInkPenItem);
 
@@ -82,7 +82,7 @@ public class CartTest {
     @Test
     public void allProductsInCartToBeCheckedOutAndCartMarkedAsCheckedOut() {
         Cart cart = new Cart(UUID.randomUUID());
-        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0));
+        Product heroInkPen = new Product("Hero Ink Pen", new Price("INR", 30.0), 100.0);
         Item heroInkPenItem = new Item(heroInkPen, 3);
         cart.addItem(heroInkPenItem);
         Order order = cart.checkOut();

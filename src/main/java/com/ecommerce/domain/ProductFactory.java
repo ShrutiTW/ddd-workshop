@@ -6,7 +6,7 @@ public class ProductFactory {
 
 
     public static Product productFor(String productName) {
-        return new Product(productName, CompetitorPricer.discountedPrice(productName));
+        return new Product(productName, CompetitorPricer.discountedPrice(productName), 100.0);
     }
 
 }
